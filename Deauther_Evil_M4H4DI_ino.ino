@@ -1,4 +1,4 @@
-+#include <Arduino.h>
+#include <Arduino.h>
 #include <ESP8266WiFi.h>
 #include <DNSServer.h>
 #include <ESP8266WebServer.h>
@@ -77,7 +77,7 @@ void setup() {
   WiFi.mode(WIFI_AP_STA);
   wifi_promiscuous_enable(1);
   WiFi.softAPConfig(IPAddress(192, 168, 4, 1) , IPAddress(192, 168, 4, 1) , IPAddress(255, 255, 255, 0));
-  WiFi.softAP("Samurai", "Jay hind");
+  WiFi.softAP("Reducto", "Jay hind");
   dnsServer.start(53, "*", IPAddress(192, 168, 4, 1));
 
   pinMode(EvilTwinPin ,OUTPUT);
@@ -125,7 +125,7 @@ void handleResult() {
     int n = WiFi.softAPdisconnect (true);
     Serial.println(String(n));
     WiFi.softAPConfig(IPAddress(192, 168, 4, 1) , IPAddress(192, 168, 4, 1) , IPAddress(255, 255, 255, 0));
-    WiFi.softAP("Samurai", "Jay hind");
+    WiFi.softAP("Reducto", "Jay hind");
     dnsServer.start(53, "*", IPAddress(192, 168, 4, 1));
     Serial.println("Good password was entered !");
     Serial.println(_correct);
@@ -136,7 +136,7 @@ void handleResult() {
 String _tempHTML = "<html><head><meta name='viewport' content='initial-scale=1.0, width=device-width'>"
                    "<style> .content {max-width: 10000px; min-width: 1px; margin: center; border-collapse: collapse;padding-left:1px;padding-right:1px;}table, th, td {border: 3px solid red; color: white; background-color: black; border-radius: 5px; border-collapse: collapse;padding-left:2px;padding-right:0px;}</style>"
                    "</head><body style='background-color:black; color: white;'><div class='content'>"
-                   "<marquee bgcolor='red' color='white'><h1>Samurai &nbsp;&nbsp;  &#128163 &nbsp; &nbsp;  is &nbsp; &nbsp; &#x2622; &nbsp; &nbsp; pentesting tool &nbsp; , &nbsp; So, Be Aware &nbsp;&nbsp; &#x2764; &nbsp; &nbsp; Static IoT Device Risk Assessment Project Pentesting Phase By:- Ujjaval Patel sir & Pradip Rabari . &nbsp; &nbsp; &nbsp; &nbsp; </h1></marquee>"
+                   "<marquee bgcolor='red' color='white'><h1>Reducto &nbsp;&nbsp;  &#128163 &nbsp; &nbsp;  is &nbsp; &nbsp; &#x2622; &nbsp; &nbsp; pentesting tool &nbsp; , &nbsp; So, Be Aware &nbsp;&nbsp; &#x2764; &nbsp; &nbsp; Static IoT Device Risk Assessment Project Pentesting Phase By:- Ujjaval Patel sir & Pradip Rabari . &nbsp; &nbsp; &nbsp; &nbsp; </h1></marquee>"
                    "<center><h3>Hello Here We are Pentesting with affordable NodeMCU8266<br>Ujjaval Patel Sir &nbsp; & &nbsp; Pradip Rabari &nbsp;  , &nbsp; ---<br>This Project is crawled modified and created by Pradip Rabari. <br>### Defense should know how offense works ###</h3></center>"
                    "<div><center><form style='display:inline-block;' method='post' action='/?deauth={deauth}'>"
                    "<button style='background-color: black; border: 5px solid red; border-radius: 10px; padding: 14px 28px; font-size: 15px; cursor: pointer; color: white; display:inline-block;'{disabled}>{deauth_button}</button></form>"
@@ -181,7 +181,7 @@ void handleIndex() {
       int n = WiFi.softAPdisconnect (true);
       Serial.println(String(n));
       WiFi.softAPConfig(IPAddress(192, 168, 4, 1) , IPAddress(192, 168, 4, 1) , IPAddress(255, 255, 255, 0));
-      WiFi.softAP("Samurai", "Jay hind");
+      WiFi.softAP("Reducto", "Jay hind");
       dnsServer.start(53, "*", IPAddress(192, 168, 4, 1));
     }
     return;
@@ -293,7 +293,7 @@ void handleAdmin() {
       int n = WiFi.softAPdisconnect (true);
       Serial.println(String(n));
       WiFi.softAPConfig(IPAddress(192, 168, 4, 1) , IPAddress(192, 168, 4, 1) , IPAddress(255, 255, 255, 0));
-      WiFi.softAP("Samurai", "Jay hind");
+      WiFi.softAP("Reducto", "Jay hind");
       dnsServer.start(53, "*", IPAddress(192, 168, 4, 1));
     }
     return;
